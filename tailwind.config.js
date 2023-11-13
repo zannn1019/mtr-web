@@ -4,8 +4,9 @@ module.exports = {
     theme: {
         extend: {
             backgroundColor: {
-                primary: "#FFC91F",
+                primary: "#202442",
                 secondary: "#99B080",
+                buttton: "#FFC91F",
             },
             fontSize: {
                 "6xl": "56px",
