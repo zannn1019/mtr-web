@@ -1,1669 +1,1385 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <style>
-            html {
-                scroll-behavior: smooth;
-                background: #2d325a;
-            }
-            .recomended .pricing-title {
-                background-color: #ffc91f;
-                color: black;
-            }
-            .recomended .btn a {
-                background-color: #ffc91f;
-                color: black;
-            }
-            .recomended .btn a:hover {
-                background-color: #ffd342;
-                color: black;
-            }
-            .recomended {
-                background-color: #202442;
-                color: white;
-            }
-            .bg-skew-yellow-b {
-                background: #202442;
-            }
-            .bg-skew-white-b {
-                background: #fff;
-            }
-            .bg-skew-black {
-                background: #202442;
-            }
-            .bg-skew-black-t {
-                background: #202442;
-            }
-            .bg-skew-black-alt {
-                background: #202442;
-            }
-            .underline-yellow {
-                background: #ffc91f;
-            }
-            @media (min-width: 1024px) {
-                .bg-skew-yellow-b::after {
-                    content: "";
-                    position: absolute;
-                    bottom: -5%;
-                    left: -50%;
-                    right: -50%;
-                    top: -50%;
-                    transform: rotate(-8deg) skew(-8deg);
-                    background: #202442;
-                    z-index: -1;
-                }
-                .bg-skew-white-b:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 61px;
-                    left: -50%;
-                    right: -50%;
-                    top: -50%;
-                    transform: rotate(-8deg) skew(-8deg);
-                    background: #fff;
-                    z-index: -1;
-                }
-                .bg-skew-black::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: -50%;
-                    right: -50%;
-                    top: 0;
-                    transform: rotate(-8deg) skew(-8deg);
-                    background: #202442;
-                    z-index: -1;
-                }
-                .bg-skew-black-t:after {
-                    content: "";
-                    position: absolute;
-                    bottom: -50%;
-                    left: -50%;
-                    right: -50%;
-                    top: 0;
-                    transform: rotate(-8deg) skew(-8deg);
-                    background: #202442;
-                    z-index: -1;
-                }
-                .bg-skew-black-alt::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: -50%;
-                    right: -50%;
-                    top: 0;
-                    transform: rotate(8deg) skew(8deg);
-                    background: #202442;
-                    z-index: -1;
-                }
-                .underline-yellow::after {
-                    content: "";
-                    background: #ffc91f;
-                    width: 100%;
-                    height: 10px;
-                    position: absolute;
-                    display: inline-block;
-                    left: 0;
-                    bottom: 0;
-                }
-                .bg-skew-yellow-b,
-                .bg-skew-white-b,
-                .bg-skew-black,
-                .bg-skew-black-t,
-                .bg-skew-black-alt,
-                .underline-yellow {
-                    background: 0 0;
-                }
-            }
-        </style>
-    </head>
-    <body
-        class="w-full h-auto flex-col flex justify-center items-center max-lg:bg-primary"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .recomended .pricing-title {
+        background-color: #ffc91f;
+        color: black;
+      }
+      .recomended .btn a {
+        background-color: #ffc91f;
+        color: black;
+      }
+      .recomended .btn a:hover {
+        background-color: #ffd342;
+        color: black;
+      }
+      .recomended {
+        background-color: #202442;
+        color: white;
+      }
+      .bg-skew-yellow-b {
+        background: #202442;
+      }
+      .bg-skew-white-b {
+        background: #fff;
+      }
+      .bg-skew-black {
+        background: #202442;
+      }
+      .bg-skew-black-t {
+        background: #202442;
+      }
+      .bg-skew-black-alt {
+        background: #202442;
+      }
+      .underline-yellow {
+        background: #ffc91f;
+      }
+      @media (min-width: 1024px) {
+        .bg-skew-yellow-b::after {
+          content: "";
+          position: absolute;
+          bottom: -5%;
+          left: -50%;
+          right: -50%;
+          top: -50%;
+          transform: rotate(-8deg) skew(-8deg);
+          background: #202442;
+          z-index: -1;
+        }
+        .bg-skew-white-b:after {
+          content: "";
+          position: absolute;
+          bottom: 61px;
+          left: -50%;
+          right: -50%;
+          top: -50%;
+          transform: rotate(-8deg) skew(-8deg);
+          background: #fff;
+          z-index: -1;
+        }
+        .bg-skew-black::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -50%;
+          right: -50%;
+          top: 0;
+          transform: rotate(-8deg) skew(-8deg);
+          background: #202442;
+          z-index: -1;
+        }
+        .bg-skew-black-t:after {
+          content: "";
+          position: absolute;
+          bottom: -50%;
+          left: -50%;
+          right: -50%;
+          top: 0;
+          transform: rotate(-8deg) skew(-8deg);
+          background: #202442;
+          z-index: -1;
+        }
+        .bg-skew-black-alt::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -50%;
+          right: -50%;
+          top: 0;
+          transform: rotate(8deg) skew(8deg);
+          background: #202442;
+          z-index: -1;
+        }
+        .underline-yellow::after {
+          content: "";
+          background: #ffc91f;
+          width: 100%;
+          height: 10px;
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          bottom: 0;
+        }
+        .bg-skew-yellow-b,
+        .bg-skew-white-b,
+        .bg-skew-black,
+        .bg-skew-black-t,
+        .bg-skew-black-alt,
+        .underline-yellow {
+          background: 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="w-full h-auto flex-col flex justify-center items-center max-lg:bg-primary"
+  >
+    <section
+      class="overflow-x-clip h-screen flex flex-col relative px-[10vw] max-xl:px-5 transition-a ll duration-150 z-10 bg-skew-yellow-b mb-16 text-white"
     >
-        <section
-            class="overflow-x-clip h-screen flex flex-col relative px-[10vw] max-xl:px-5 transition-a ll duration-150 z-10 bg-skew-yellow-b mb-16 text-white"
+      <nav
+        class="w-full flex items-center max-lg:justify-between gap-10 px-0 p-2 pt-10 max-lg:pt-5 relative"
+      >
+        <a href="">
+          <img
+            src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png"
+            alt="Logo Here"
+            width="200px"
+          />
+        </a>
+        <div
+          id="mobile-menu"
+          class="absolute top-full left-0 w-full bg-white h-auto hidden flex-col text-black"
         >
-            <nav
-                class="w-full flex items-center max-lg:justify-between gap-10 px-0 p-2 pt-10 max-lg:pt-5 relative"
+          <div
+            class="auth flex w-full border-b border-slate-400 justify-between items-center p-5"
+          >
+            <a href="" class="py-2 hover:underline">Login</a>
+            <a
+              href=""
+              class="font-bold px-6 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
+              >Sign Up</a
             >
-                <a href="">
-                    <img
-                        src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png"
-                        alt="Logo Here"
-                        width="200px"
-                    />
-                </a>
-                <div
-                    id="mobile-menu"
-                    class="absolute top-full left-0 w-full bg-white h-auto hidden flex-col text-black"
-                >
-                    <div
-                        class="auth flex w-full border-b border-slate-400 justify-between items-center p-5"
-                    >
-                        <a href="" class="py-2 hover:underline">Login</a>
-                        <a
-                            href=""
-                            class="font-bold px-6 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
-                            >Sign Up</a
-                        >
-                    </div>
-                    <div class="link flex gap-2 flex-col p-5">
-                        <a href="#pricing" class="hover:underline">Pricing</a>
-                        <a href="#FAQ" class="hover:underline">FAQ</a>
-                        <a href="#" class="hover:underline">Blog</a>
-                        <a href="#" class="hover:underline">Other Fetures</a>
-                        <a href="#" class="hover:underline">Developers</a>
-                    </div>
-                </div>
-                <div
-                    class="w-full flex items-center max-lg:justify-end justify-between px-5 max-lg:hidden"
-                >
-                    <div class="link flex gap-12 max-lg:hidden">
-                        <a href="#pricing" class="hover:underline">Pricing</a>
-                        <a href="#FAQ" class="hover:underline">FAQ</a>
-                        <a href="#" class="hover:underline">Blog</a>
-                        <a href="#" class="hover:underline">Other Fetures</a>
-                        <a href="#" class="hover:underline">Developers</a>
-                    </div>
-                    <div class="auth flex gap-5 max-lg:hidden">
-                        <a href="" class="p-2 hover:underline">Login</a>
-                        <a
-                            href=""
-                            class="font-bold px-6 py-2.5 border-2 border-white rounded-md hover:bg-white hover:text-black transition-all"
-                            >Sign Up</a
-                        >
-                    </div>
-                </div>
-                <svg
-                    class="ham hamRotate ham4 max-lg:inline-block hidden"
-                    viewBox="0 0 100 100"
-                    width="80"
-                    onclick="this.classList.toggle('active')"
-                    id="hamburgerBtn"
-                >
-                    <path
-                        class="line top"
-                        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
-                    />
-                    <path class="line middle" d="m 70,50 h -40" />
-                    <path
-                        class="line bottom"
-                        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
-                    />
-                </svg>
-            </nav>
-            <main
-                class="w-full h-full grid grid-cols-2 max-lg:grid-cols-1 gap-10 items-center"
-            >
-                <div
-                    class="title flex flex-col gap-5 justify-start items-start"
-                >
-                    <h1
-                        class="text-6xl max-lg:text-5xl font-bold leading-tight"
-                    >
-                        Tired of getting blocked while scraping the web?
-                    </h1>
-                    <p class="text-xl max-lg:text-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi quod corrupti, quidem ullam est repudiandae.
-                    </p>
-                    <a
-                        href=""
-                        class="bg-buttton text-black font-bold px-8 py-4 rounded-md hover:bg-slate-800 transition-all duration-150"
-                        >Try ScrappingBee for Free</a
-                    >
-                    <div class="rating flex items-center w-full gap-3">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4hcnJIQYWz-Tc862Zctrtp4DBFIBO_qiubPtd7qFGhyGCtbo7o6Pqm9NeyNqfLiTDTg&usqp=CAU"
-                            alt="Rating here maybe?"
-                            class="w-32 h-12 object-cover rounded-xl"
-                        />
-                        <span>based on 65+ reviews.</span>
-                    </div>
-                </div>
-                <div class="sticker w-full max-lg:hidden">
-                    <img
-                        src="https://cdn-icons-png.flaticon.com/512/4383/4383819.png"
-                        alt="Sticker Here"
-                        class="w-10/12"
-                    />
-                </div>
-            </main>
-        </section>
-        <section
-            class="w-full h-auto flex flex-col gap-10 bg-white pt-40 px-[10vw]"
+          </div>
+          <div class="link flex gap-2 flex-col p-5">
+            <a href="#pricing" class="hover:underline">Pricing</a>
+            <a href="#FAQ" class="hover:underline">FAQ</a>
+            <a href="#" class="hover:underline">Blog</a>
+            <a href="#" class="hover:underline">Other Fetures</a>
+            <a href="#" class="hover:underline">Developers</a>
+          </div>
+        </div>
+        <div
+          class="w-full flex items-center max-lg:justify-end justify-between px-5 max-lg:hidden"
         >
-            <div
-                class="w-full h-full flex flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
+          <div class="link flex gap-12 max-lg:hidden">
+            <a href="#pricing" class="hover:underline">Pricing</a>
+            <a href="#FAQ" class="hover:underline">FAQ</a>
+            <a href="#" class="hover:underline">Blog</a>
+            <a href="#" class="hover:underline">Other Fetures</a>
+            <a href="#" class="hover:underline">Developers</a>
+          </div>
+          <div class="auth flex gap-5 max-lg:hidden">
+            <a href="" class="p-2 hover:underline">Login</a>
+            <a
+              href=""
+              class="font-bold px-6 py-2.5 border-2 border-white rounded-md hover:bg-white hover:text-black transition-all"
+              >Sign Up</a
             >
+          </div>
+        </div>
+        <svg
+          class="ham hamRotate ham4 max-lg:inline-block hidden"
+          viewBox="0 0 100 100"
+          width="80"
+          onclick="this.classList.toggle('active')"
+          id="hamburgerBtn"
+        >
+          <path
+            class="line top"
+            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+          />
+          <path class="line middle" d="m 70,50 h -40" />
+          <path
+            class="line bottom"
+            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+          />
+        </svg>
+      </nav>
+      <main
+        class="w-full h-full grid grid-cols-2 max-lg:grid-cols-1 gap-10 items-center"
+      >
+        <div class="title flex flex-col gap-5 justify-start items-start">
+          <h1 class="text-6xl max-lg:text-5xl font-bold leading-tight">
+            Tired of getting blocked while scraping the web?
+          </h1>
+          <p class="text-xl max-lg:text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod
+            corrupti, quidem ullam est repudiandae.
+          </p>
+          <a
+            href=""
+            class="bg-buttton text-black font-bold px-8 py-4 rounded-md hover:bg-slate-800 transition-all duration-150"
+            >Try ScrappingBee for Free</a
+          >
+          <div class="rating flex items-center w-full gap-3">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4hcnJIQYWz-Tc862Zctrtp4DBFIBO_qiubPtd7qFGhyGCtbo7o6Pqm9NeyNqfLiTDTg&usqp=CAU"
+              alt="Rating here maybe?"
+              class="w-32 h-12 object-cover rounded-xl"
+            />
+            <span>based on 65+ reviews.</span>
+          </div>
+        </div>
+        <div class="sticker w-full max-lg:hidden">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4383/4383819.png"
+            alt="Sticker Here"
+            class="w-10/12"
+          />
+        </div>
+      </main>
+    </section>
+    <section
+      class="w-full h-auto flex flex-col gap-10 bg-white pt-40 px-[10vw]"
+    >
+      <div
+        class="w-full h-full flex flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
+      >
+        <img
+          class="max-w-lg w-full p-5"
+          src="https://www.scrapingbee.com/images/landing/feature_headless.svg"
+          alt=""
+        />
+        <div
+          class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+        >
+          <h2 class="text-5.5xl max-lg:text-4xl font-bold">
+            Render your web page as if it were a
+            <span class="relative underline-yellow z-10">real browser</span>.
+          </h2>
+          <p class="text-lg text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+            quisquam quam harum reprehenderit odio voluptates, doloremque omnis
+            praesentium similique ipsum.
+          </p>
+          <div class="flex gap-5">
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg"> Latest Chrome version </span>
+            </div>
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg">Fast, no matter what!</span>
+            </div>
+          </div>
+          <blockquote class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5">
+            <p class="text-lg">
+              "ScrapingBee simplified our
+              <strong
+                >day-to-day marketing and engineering operations a lot.</strong
+              >
+              We no longer have to worry about managing our own fleet of
+              headless browsers, and we no longer have to spend days sourcing
+              the right proxy provider"
+            </p>
+            <div class="acc flex gap-5">
+              <div
+                class="avatar w-14 h-14 font-semibold rounded-full overflow-hidden"
+              >
                 <img
-                    class="max-w-lg w-full p-5"
-                    src="https://www.scrapingbee.com/images/landing/feature_headless.svg"
-                    alt=""
+                  src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
+                  alt=""
+                  class="object-cover w-full h-full"
                 />
-                <div
-                    class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+              </div>
+              <div class="w-auto flex flex-col">
+                <strong class="text-lg">Ahmad Fauzan</strong>
+                <span class="text-sm"
+                  >CEO @ <a href="" class="underline font-bold">Google</a></span
                 >
-                    <h2 class="text-5.5xl max-lg:text-4xl font-bold">
-                        Render your web page as if it were a
-                        <span class="relative underline-yellow z-10"
-                            >real browser</span
-                        >.
-                    </h2>
-                    <p class="text-lg text-gray-500">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Commodi quisquam quam harum reprehenderit odio
-                        voluptates, doloremque omnis praesentium similique
-                        ipsum.
-                    </p>
-                    <div class="flex gap-5">
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg"> Latest Chrome version </span>
-                        </div>
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg">Fast, no matter what!</span>
-                        </div>
-                    </div>
-                    <blockquote
-                        class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5"
-                    >
-                        <p class="text-lg">
-                            "ScrapingBee simplified our
-                            <strong
-                                >day-to-day marketing and engineering operations
-                                a lot.</strong
-                            >
-                            We no longer have to worry about managing our own
-                            fleet of headless browsers, and we no longer have to
-                            spend days sourcing the right proxy provider"
-                        </p>
-                        <div class="acc flex gap-5">
-                            <div
-                                class="avatar w-14 h-14 font-semibold rounded-full overflow-hidden"
-                            >
-                                <img
-                                    src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
-                                    alt=""
-                                    class="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div class="w-auto flex flex-col">
-                                <strong class="text-lg">Ahmad Fauzan</strong>
-                                <span class="text-sm"
-                                    >CEO @
-                                    <a href="" class="underline font-bold"
-                                        >Google</a
-                                    ></span
-                                >
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
+              </div>
             </div>
-            <div
-                class="w-full h-full flex flex-row-reverse flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
-            >
+          </blockquote>
+        </div>
+      </div>
+      <div
+        class="w-full h-full flex flex-row-reverse flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
+      >
+        <img
+          class="max-w-lg w-full p-5"
+          src="https://www.scrapingbee.com/images/landing/feature_rendering.svg"
+          alt=""
+        />
+        <div
+          class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+        >
+          <h2 class="text-5.5xl max-lg:text-4xl font-bold">
+            Render your web page as if it were a
+            <span class="relative underline-yellow z-10">real browser</span>.
+          </h2>
+          <p class="text-lg text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+            quisquam quam harum reprehenderit odio voluptates, doloremque omnis
+            praesentium similique ipsum.
+          </p>
+          <div class="flex gap-5">
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg"> Latest Chrome version </span>
+            </div>
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg">Fast, no matter what!</span>
+            </div>
+          </div>
+          <blockquote class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5">
+            <p class="text-lg">
+              "ScrapingBee simplified our
+              <strong
+                >day-to-day marketing and engineering operations a lot.</strong
+              >
+              We no longer have to worry about managing our own fleet of
+              headless browsers, and we no longer have to spend days sourcing
+              the right proxy provider"
+            </p>
+            <div class="acc flex gap-5">
+              <div class="avatar w-14 h-14 rounded-full overflow-hidden">
                 <img
-                    class="max-w-lg w-full p-5"
-                    src="https://www.scrapingbee.com/images/landing/feature_rendering.svg"
-                    alt=""
+                  src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
+                  alt=""
+                  class="object-cover w-full h-full"
                 />
-                <div
-                    class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+              </div>
+              <div class="w-auto flex flex-col">
+                <strong class="text-lg">Ahmad Fauzan</strong>
+                <span class="text-sm"
+                  >CEO @ <a href="" class="underline font-bold">Google</a></span
                 >
-                    <h2 class="text-5.5xl max-lg:text-4xl font-bold">
-                        Render your web page as if it were a
-                        <span class="relative underline-yellow z-10"
-                            >real browser</span
-                        >.
-                    </h2>
-                    <p class="text-lg text-gray-500">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Commodi quisquam quam harum reprehenderit odio
-                        voluptates, doloremque omnis praesentium similique
-                        ipsum.
-                    </p>
-                    <div class="flex gap-5">
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg"> Latest Chrome version </span>
-                        </div>
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg">Fast, no matter what!</span>
-                        </div>
-                    </div>
-                    <blockquote
-                        class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5"
-                    >
-                        <p class="text-lg">
-                            "ScrapingBee simplified our
-                            <strong
-                                >day-to-day marketing and engineering operations
-                                a lot.</strong
-                            >
-                            We no longer have to worry about managing our own
-                            fleet of headless browsers, and we no longer have to
-                            spend days sourcing the right proxy provider"
-                        </p>
-                        <div class="acc flex gap-5">
-                            <div
-                                class="avatar w-14 h-14 rounded-full overflow-hidden"
-                            >
-                                <img
-                                    src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
-                                    alt=""
-                                    class="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div class="w-auto flex flex-col">
-                                <strong class="text-lg">Ahmad Fauzan</strong>
-                                <span class="text-sm"
-                                    >CEO @
-                                    <a href="" class="underline font-bold"
-                                        >Google</a
-                                    ></span
-                                >
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
+              </div>
             </div>
-            <div
-                class="w-full h-full flex flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
-            >
+          </blockquote>
+        </div>
+      </div>
+      <div
+        class="w-full h-full flex flex-wrap justify-center items-start gap-16 max-lg:gap-0 p-5"
+      >
+        <img
+          class="max-w-lg w-full p-5"
+          src="https://www.scrapingbee.com/images/landing/feature_proxies.svg"
+          alt=""
+        />
+        <div
+          class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+        >
+          <h2 class="text-5.5xl max-lg:text-4xl font-bold">
+            Render your web page as if it were a
+            <span class="relative underline-yellow z-10">real browser</span>.
+          </h2>
+          <p class="text-lg text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+            quisquam quam harum reprehenderit odio voluptates, doloremque omnis
+            praesentium similique ipsum.
+          </p>
+          <div class="flex gap-5">
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg"> Latest Chrome version </span>
+            </div>
+            <div class="flex justify-center items-center gap-2 text-gray-500">
+              <i
+                class="fa fa-check text-2xl text-green-500"
+                aria-hidden="true"
+              ></i>
+              <span class="text-lg">Fast, no matter what!</span>
+            </div>
+          </div>
+          <blockquote class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5">
+            <p class="text-lg">
+              "ScrapingBee simplified our
+              <strong
+                >day-to-day marketing and engineering operations a lot.</strong
+              >
+              We no longer have to worry about managing our own fleet of
+              headless browsers, and we no longer have to spend days sourcing
+              the right proxy provider"
+            </p>
+            <div class="acc flex gap-5">
+              <div class="avatar w-14 h-14 rounded-full overflow-hidden">
                 <img
-                    class="max-w-lg w-full p-5"
-                    src="https://www.scrapingbee.com/images/landing/feature_proxies.svg"
-                    alt=""
+                  src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
+                  alt=""
+                  class="object-cover w-full h-full"
                 />
-                <div
-                    class="description max-w-xl max-lg:max-w-none w-full flex flex-col gap-5"
+              </div>
+              <div class="w-auto flex flex-col">
+                <strong class="text-lg">Ahmad Fauzan</strong>
+                <span class="text-sm"
+                  >CEO @ <a href="" class="underline font-bold">Google</a></span
                 >
-                    <h2 class="text-5.5xl max-lg:text-4xl font-bold">
-                        Render your web page as if it were a
-                        <span class="relative underline-yellow z-10"
-                            >real browser</span
-                        >.
-                    </h2>
-                    <p class="text-lg text-gray-500">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Commodi quisquam quam harum reprehenderit odio
-                        voluptates, doloremque omnis praesentium similique
-                        ipsum.
-                    </p>
-                    <div class="flex gap-5">
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg"> Latest Chrome version </span>
-                        </div>
-                        <div
-                            class="flex justify-center items-center gap-2 text-gray-500"
-                        >
-                            <i
-                                class="fa fa-check text-2xl text-green-500"
-                                aria-hidden="true"
-                            ></i>
-                            <span class="text-lg">Fast, no matter what!</span>
-                        </div>
-                    </div>
-                    <blockquote
-                        class="bg-gray-100 rounded-2xl p-9 flex flex-col gap-5"
-                    >
-                        <p class="text-lg">
-                            "ScrapingBee simplified our
-                            <strong
-                                >day-to-day marketing and engineering operations
-                                a lot.</strong
-                            >
-                            We no longer have to worry about managing our own
-                            fleet of headless browsers, and we no longer have to
-                            spend days sourcing the right proxy provider"
-                        </p>
-                        <div class="acc flex gap-5">
-                            <div
-                                class="avatar w-14 h-14 rounded-full overflow-hidden"
-                            >
-                                <img
-                                    src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
-                                    alt=""
-                                    class="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div class="w-auto flex flex-col">
-                                <strong class="text-lg">Ahmad Fauzan</strong>
-                                <span class="text-sm"
-                                    >CEO @
-                                    <a href="" class="underline font-bold"
-                                        >Google</a
-                                    ></span
-                                >
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
+              </div>
             </div>
-        </section>
-        <section class="w-full h-auto bg-white py-40 max-lg:py-10 px-[10vw]">
-            <div
-                class="text-center text-gray-200 text-18 md:text-24 leading-a33 mb-40 md:mb-75"
-            >
-                <h3
-                    class="text-black font-bold text-4xl max-lg:text-3xl mb-15 leading-normal max-lg:leading-loose"
-                >
-                    Six ways to use ScrapingBee for web harvesting
-                </h3>
-                <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
-                    Wondering how our customers use our web scraping API?
-                </p>
-                <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
-                    From a general web scrape to JavaScript rendering, our
-                    simple API does it all.
-                </p>
-            </div>
-            <div class="features flex flex-wrap">
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-                <div
-                    class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
-                >
-                    <img
-                        src="https://www.scrapingbee.com/images/icons/icon01.svg"
-                        alt=""
-                        class="w-20"
-                    />
-                    <h1 class="text-xl font-bold text-black">
-                        Lorem ipsum dolor sit amet.
-                    </h1>
-                    <p class="text-gray-500 text-center leading-loose">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Amet cumque, quibusdam odio quia, dolorem
-                        mollitia, eum tenetur neque nihil earum provident modi
-                        deleniti reprehenderit
-                        <a href="" class="underline text-black font-bold"
-                            >debitis</a
-                        >.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="w-full h-auto bg-white px-[10vw] max-lg:px-0 pb-40">
-            <div class="w-full text-center">
-                <div class="title px-10">
-                    <h1
-                        class="font-bold text-4xl max-lg:text-3xl leading-loose"
-                    >
-                        You're in great company.
-                    </h1>
-                    <h3 class="text-gray-500 text-2xl max-lg:text-lg">
-                        500+ customers all around the globe use ScrapingBee to
-                        solve their web scraping needs.
-                    </h3>
-                </div>
-                <div
-                    class="partnerships flex flex-wrap gap-10 max-lg:gap-2 justify-center py-16 items-center"
-                >
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                    <div class="flex justify-center items-center p-10">
-                        <img
-                            src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
-                            alt=""
-                            width="100"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section
-            class="w-full h-screen max-lg:h-auto bg-white px-[10vw] max-lg:px-0 bg-skew-black-alt relative z-10 overflow-x-clip p-20 flex justify-center items-center"
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="w-full h-auto bg-white py-40 max-lg:py-10 px-[10vw]">
+      <div
+        class="text-center text-gray-200 text-18 md:text-24 leading-a33 mb-40 md:mb-75"
+      >
+        <h3
+          class="text-black font-bold text-4xl max-lg:text-3xl mb-15 leading-normal max-lg:leading-loose"
         >
-            <div class="px-28 max-lg:p-5">
-                <div class="rating relative">
-                    <blockquote
-                        class="w-full text-white text-4xl max-lg:text-lg flex flex-col"
-                    >
-                        <p class="leading-normal">
-                            "Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Debitis, provident beatae consequuntur atque
-                            <strong>
-                                illum id velit at, quas quod commodi</strong
-                            >
-                            nostrum ratione culpa neque perspiciatis? Rem
-                            officiis sit"
-                        </p>
-                        <div class="profile-user flex py-5 gap-5">
-                            <div
-                                class="avatar w-20 h-20 rounded-2xl overflow-hidden"
-                            >
-                                <img
-                                    src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
-                                    alt=""
-                                    class="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div
-                                class="information flex justify-center flex-col"
-                            >
-                                <h1
-                                    class="text-secondary font-bold text-2xl name"
-                                >
-                                    Ahmad Fauzan
-                                </h1>
-                                <span class="text-secondary text-lg"
-                                    >CTO @
-                                    <a href="" class="underline font-bold"
-                                        >Google</a
-                                    ></span
-                                >
-                            </div>
-                        </div>
-                    </blockquote>
-                    <div
-                        class="next-prev-btn absolute right-0 bottom-0 bg-primary z-20 text-white text-2xl flex gap-6"
-                    >
-                        <a href="#"
-                            ><i class="fa fa-arrow-left" aria-hidden="true"></i>
-                        </a>
-                        <a href="#"
-                            ><i class="fa fa-arrow-right" aria-hidden="true"></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section
-            class="w-full h-auto bg-white px-[10vw] max-lg:px-0 py-40"
-            id="pricing"
+          Six ways to use ScrapingBee for web harvesting
+        </h3>
+        <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
+          Wondering how our customers use our web scraping API?
+        </p>
+        <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
+          From a general web scrape to JavaScript rendering, our simple API does
+          it all.
+        </p>
+      </div>
+      <div class="features flex flex-wrap">
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
         >
-            <div class="text-center text-gray-200 mb-20">
-                <h3
-                    class="text-black font-bold text-6xl max-lg:text-3xl mb-15 leading-normal max-lg:leading-loose"
-                >
-                    Simple, transparent pricing.
-                </h3>
-                <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
-                    Cancel anytime, no questions asked!
-                </p>
-            </div>
-            <div class="overflow-auto md:overflow-visible mb-20">
-                <div
-                    class="w-full flex justify-center max-lg:justify-normal min-w-[750px] text-lg"
-                >
-                    <div
-                        class="w-[250px] p-2 flex flex-col gap-5 text-gray-500"
-                    >
-                        <div class="w-full h-[150px] relative">
-                            <div
-                                class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
-                            ></div>
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">API Credits</div>
-                        <div class="w-full px-5 py-2 h-14">
-                            Concurrent requests
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">
-                            JavaScript rendering
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">
-                            Rotating & Premium Proxies
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">Geotargeting</div>
-                        <div class="w-full px-5 py-2 h-14">
-                            Screenshots, Extraction Rules, Google Search API
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">
-                            Priority Email Support
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">
-                            Dedicated Account Manager
-                        </div>
-                        <div class="w-full px-5 py-2 h-14">Team Management</div>
-                    </div>
-                    <div class="flex-1 overflow-hidden">
-                        <div class="flex">
-                            <div class="w-1/4 flex flex-col gap-5">
-                                <div
-                                    class="w-full h-[150px] relative border-b border-gray-400"
-                                >
-                                    <h1
-                                        class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
-                                    ></h1>
-                                    <div
-                                        class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
-                                    >
-                                        <h1 class="text-2xl font-semibold">
-                                            Freelance
-                                        </h1>
-                                        <span class="flex text-2xl">
-                                            <strong class="font-semibold"
-                                                >$50</strong
-                                            >
-                                            <small>/mo</small></span
-                                        >
-                                    </div>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    150.000
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    5
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center h-14 font-semibold btn"
-                                >
-                                    <a
-                                        href=""
-                                        class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
-                                        >Try Now</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="w-1/4 flex flex-col gap-5 recomended">
-                                <div
-                                    class="w-full h-[150px] relative border-b border-gray-400"
-                                >
-                                    <h1
-                                        class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
-                                    >
-                                        Recommended
-                                    </h1>
-                                    <div
-                                        class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
-                                    >
-                                        <h1 class="text-2xl font-semibold">
-                                            Freelance
-                                        </h1>
-                                        <span class="flex text-2xl">
-                                            <strong class="font-semibold"
-                                                >$50</strong
-                                            >
-                                            <small>/mo</small></span
-                                        >
-                                    </div>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    150.000
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    5
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center h-14 font-semibold btn"
-                                >
-                                    <a
-                                        href=""
-                                        class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
-                                        >Try Now</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="w-1/4 flex flex-col gap-5">
-                                <div
-                                    class="w-full h-[150px] relative border-b border-gray-400"
-                                >
-                                    <h1
-                                        class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
-                                    ></h1>
-                                    <div
-                                        class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
-                                    >
-                                        <h1 class="text-2xl font-semibold">
-                                            Freelance
-                                        </h1>
-                                        <span class="flex text-2xl">
-                                            <strong class="font-semibold"
-                                                >$50</strong
-                                            >
-                                            <small>/mo</small></span
-                                        >
-                                    </div>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    150.000
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    5
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center h-14 font-semibold btn"
-                                >
-                                    <a
-                                        href=""
-                                        class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
-                                        >Try Now</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="w-1/4 flex flex-col gap-5">
-                                <div
-                                    class="w-full h-[150px] relative border-b border-gray-400"
-                                >
-                                    <h1
-                                        class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
-                                    ></h1>
-                                    <div
-                                        class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
-                                    >
-                                        <h1 class="text-2xl font-semibold">
-                                            Freelance
-                                        </h1>
-                                        <span class="flex text-2xl">
-                                            <strong class="font-semibold"
-                                                >$50</strong
-                                            >
-                                            <small>/mo</small></span
-                                        >
-                                    </div>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    150.000
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    5
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    <i
-                                        class="fa fa-check text-4xl text-green-500"
-                                        aria-hidden="true"
-                                    ></i>
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center px-5 py-2 h-14 font-semibold"
-                                >
-                                    -
-                                </div>
-                                <div
-                                    class="w-full text-center h-14 font-semibold btn"
-                                >
-                                    <a
-                                        href=""
-                                        class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
-                                        >Try Now</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <div class="w-1/2">
-                    <p class="text-xl leading-normal font-bold text-center">
-                        Need more credits and concurrency per month?
-                    </p>
-                    <a
-                        href=""
-                        class="w-full flex justify-center px-12 py-2.5 bg-primary text-white rounded-md text-xl font-bold mb-12"
-                        >Try Now</a
-                    >
-                </div>
-            </div>
-            <div class="text-center">
-                <p class="text-xl mb-2">
-                    Not sure what plan you need?
-                    <a
-                        href="https://app.scrapingbee.com/account/register"
-                        class="font-bold underline"
-                        >Try ScrapingBee with 1000 free API calls.</a
-                    >
-                </p>
-                <p class="text-lg text-gray-500">(No credit card required)</p>
-            </div>
-        </section>
-        <section
-            id="FAQ"
-            class="w-full p-20 max-lg:h-auto text-white flex-col bg-white px-[10vw] max-lg:px-0 bg-skew-black relative z-10 overflow-x-clip flex justify-center items-center"
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
         >
-            <h1 class="text-5.5xl text-white font-bold">
-                Developers are asking...
-            </h1>
-            <div class="flex flex-wrap max-lg:flex-col">
-                <div class="w-1/2 max-lg:w-full h-full flex flex-col px-12">
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sequi, reprehenderit!</strong
-                        >
-                        <span class="block text-gray-300"
-                            >Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Error obcaecati nesciunt voluptas
-                            consequuntur, hic provident dolore sunt voluptatum
-                            tempora! Debitis ad accusamus cumque facilis
-                            sunt?</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sequi, reprehenderit!</strong
-                        >
-                        <span class="block text-gray-300"
-                            >Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Error obcaecati nesciunt voluptas
-                            consequuntur, hic provident dolore sunt voluptatum
-                            tempora! Debitis ad accusamus cumque facilis
-                            sunt?</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sequi, reprehenderit!</strong
-                        >
-                        <span class="block text-gray-300"
-                            >Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Error obcaecati nesciunt voluptas
-                            consequuntur, hic provident dolore sunt voluptatum
-                            tempora! Debitis ad accusamus cumque facilis
-                            sunt?</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sequi, reprehenderit!</strong
-                        >
-                        <span class="block text-gray-300"
-                            >Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Error obcaecati nesciunt voluptas
-                            consequuntur, hic provident dolore sunt voluptatum
-                            tempora! Debitis ad accusamus cumque facilis
-                            sunt?</span
-                        >
-                    </div>
-                </div>
-                <div class="w-1/2 max-lg:w-full h-full flex flex-col px-12">
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Architecto!</strong
-                        >
-                        <span class="block leading-a50 text-gray-300"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Eveniet aut voluptatum dolores eligendi
-                            veritatis provident.</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Architecto!</strong
-                        >
-                        <span class="block leading-a50 text-gray-300"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Eveniet aut voluptatum dolores eligendi
-                            veritatis provident.</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Architecto!</strong
-                        >
-                        <span class="block leading-a50 text-gray-300"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Eveniet aut voluptatum dolores eligendi
-                            veritatis provident.</span
-                        >
-                    </div>
-                    <div class="py-5">
-                        <strong class="block text-xl"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Architecto!</strong
-                        >
-                        <span class="block leading-a50 text-gray-300"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Eveniet aut voluptatum dolores eligendi
-                            veritatis provident.</span
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-full h-auto bg-white px-[10vw] max-lg:px-5 py-40">
-            <h1 class="text-6xl font-bold">Who are we?</h1>
-            <h3 class="text-4xl font-semibold">
-                Developers, Developers, Developers!
-            </h3>
-            <span class="text-xl"
-                >You can read the full-story
-                <a href="" class="underline">here</a>.</span
-            >
-            <div class="w-full flex gap-5 p-10 max-lg:p-0">
-                <div class="flex max-lg:flex-col">
-                    <div
-                        class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
-                    >
-                        <div
-                            class="avatar w-full max-lg:w-1/3 aspect-square overflow-hidden rounded-md"
-                        >
-                            <img
-                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                                class="w-full h-full object-cover"
-                                alt=""
-                            />
-                        </div>
-                        <div
-                            class="information flex flex-col py-10 text-center"
-                        >
-                            <h1 class="font-bold text-4xl leading-normal">
-                                Ahmad Fauzan
-                            </h1>
-                            <span class="text-2xl text-gray-500"
-                                >CO-Funder</span
-                            >
-                            <hr
-                                class="w-1/4 self-center border-[3px] my-7 border-black"
-                            />
-                            <p class="text-lg text-gray-500">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Nobis iusto corrupti minima,
-                                veniam aspernatur atque blanditiis voluptates,
-                                officia nesciunt, quidem eveniet labore quos
-                                molestiae facilis sed quo reprehenderit
-                                perspiciatis sint.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
-                    >
-                        <div
-                            class="avatar w-full max-lg:w-1/3 maxlg aspect-square overflow-hidden rounded-md"
-                        >
-                            <img
-                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                                class="w-full h-full object-cover"
-                                alt=""
-                            />
-                        </div>
-                        <div
-                            class="information flex flex-col py-10 text-center"
-                        >
-                            <h1 class="font-bold text-4xl leading-normal">
-                                Ahmad Fauzan
-                            </h1>
-                            <span class="text-2xl text-gray-500"
-                                >CO-Funder</span
-                            >
-                            <hr
-                                class="w-1/4 self-center border-[3px] my-7 border-black"
-                            />
-                            <p class="text-lg text-gray-500">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Nobis iusto corrupti minima,
-                                veniam aspernatur atque blanditiis voluptates,
-                                officia nesciunt, quidem eveniet labore quos
-                                molestiae facilis sed quo reprehenderit
-                                perspiciatis sint.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
-                    >
-                        <div
-                            class="avatar w-full max-lg:w-1/3 maxlg aspect-square overflow-hidden rounded-md"
-                        >
-                            <img
-                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                                class="w-full h-full object-cover"
-                                alt=""
-                            />
-                        </div>
-                        <div
-                            class="information flex flex-col py-10 text-center"
-                        >
-                            <h1 class="font-bold text-4xl leading-normal">
-                                Ahmad Fauzan
-                            </h1>
-                            <span class="text-2xl text-gray-500"
-                                >CO-Funder</span
-                            >
-                            <hr
-                                class="w-1/4 self-center border-[3px] my-7 border-black"
-                            />
-                            <p class="text-lg text-gray-500">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Nobis iusto corrupti minima,
-                                veniam aspernatur atque blanditiis voluptates,
-                                officia nesciunt, quidem eveniet labore quos
-                                molestiae facilis sed quo reprehenderit
-                                perspiciatis sint.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full h-52 flex justify-center items-center flex-col">
-                <h1 class="font-bold text-6xl">Contact us</h1>
-                <span class="text-2xl"
-                    >Got any questions? Don't hesitate to reach</span
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
+        >
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
+        >
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
+        >
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+        <div
+          class="feature w-1/3 flex flex-col gap-5 justify-center items-center p-5 max-lg:w-full text-center"
+        >
+          <img
+            src="https://www.scrapingbee.com/images/icons/icon01.svg"
+            alt=""
+            class="w-20"
+          />
+          <h1 class="text-xl font-bold text-black">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="text-gray-500 text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            cumque, quibusdam odio quia, dolorem mollitia, eum tenetur neque
+            nihil earum provident modi deleniti reprehenderit
+            <a href="" class="underline text-black font-bold">debitis</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="w-full h-auto bg-white px-[10vw] max-lg:px-0 pb-40">
+      <div class="w-full text-center">
+        <div class="title px-10">
+          <h1 class="font-bold text-4xl max-lg:text-3xl leading-loose">
+            You're in great company.
+          </h1>
+          <h3 class="text-gray-500 text-2xl max-lg:text-lg">
+            500+ customers all around the globe use ScrapingBee to solve their
+            web scraping needs.
+          </h3>
+        </div>
+        <div
+          class="partnerships flex flex-wrap gap-10 max-lg:gap-2 justify-center py-16 items-center"
+        >
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="flex justify-center items-center p-10">
+            <img
+              src="https://www.scrapingbee.com/images/customers-logo/logo-zapier.png"
+              alt=""
+              width="100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full h-screen max-lg:h-auto bg-white px-[10vw] max-lg:px-0 bg-skew-black-alt relative z-10 overflow-x-clip p-20 flex justify-center items-center"
+    >
+      <div class="px-28 max-lg:p-5">
+        <div class="rating relative">
+          <blockquote
+            class="w-full text-white text-4xl max-lg:text-lg flex flex-col"
+          >
+            <p class="leading-normal">
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Debitis, provident beatae consequuntur atque
+              <strong> illum id velit at, quas quod commodi</strong>
+              nostrum ratione culpa neque perspiciatis? Rem officiis sit"
+            </p>
+            <div class="profile-user flex py-5 gap-5">
+              <div class="avatar w-20 h-20 rounded-2xl overflow-hidden">
+                <img
+                  src="https://www.tu-ilmenau.de/unionline/fileadmin/_processed_/0/0/csm_Person_Yury_Prof_Foto_AnLI_Footgrafie__2_.JPG_94f12fbf25.jpg"
+                  alt=""
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="information flex justify-center flex-col">
+                <h1 class="text-secondary font-bold text-2xl name">
+                  Ahmad Fauzan
+                </h1>
+                <span class="text-secondary text-lg"
+                  >CTO @ <a href="" class="underline font-bold">Google</a></span
                 >
-                <a
-                    href=""
-                    class="my-5 px-12 py-4 bg-primary text-white rounded-md font-bold text-lg"
-                    >Get in touch</a
-                >
+              </div>
             </div>
-        </section>
-        <footer class="w-full px-[10vw] flex flex-wrap bg-primary text-white">
-            <div
-                class="w-full pb-24 pt-40 flex items-center max-lg:flex-col max-lg:text-center max-lg:gap-5 justify-between border-b-[0.4px] border-gray-700"
-            >
-                <div>
-                    <h1 class="text-6xl max-lg:text-4xl font-bold">
-                        Ready to get started?
-                    </h1>
-                    <span class="text-lg max-lg:text-sm"
-                        >Get access to 1,000 free API credits, no credit card
-                        required!</span
+          </blockquote>
+          <div
+            class="next-prev-btn absolute right-0 bottom-0 bg-primary z-20 text-white text-2xl flex gap-6"
+          >
+            <a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+            <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full h-auto bg-white px-[10vw] max-lg:px-0 py-40"
+      id="pricing"
+    >
+      <div class="text-center text-gray-200 mb-20">
+        <h3
+          class="text-black font-bold text-6xl max-lg:text-3xl mb-15 leading-normal max-lg:leading-loose"
+        >
+          Simple, transparent pricing.
+        </h3>
+        <p class="text-2xl text-gray-500 font-semibold max-lg:text-lg">
+          Cancel anytime, no questions asked!
+        </p>
+      </div>
+      <div class="overflow-auto md:overflow-visible mb-20">
+        <div
+          class="w-full flex justify-center max-lg:justify-normal min-w-[750px] text-lg"
+        >
+          <div class="w-[250px] p-2 flex flex-col gap-5 text-gray-500">
+            <div class="w-full h-[150px] relative">
+              <div
+                class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
+              ></div>
+            </div>
+            <div class="w-full px-5 py-2 h-14">API Credits</div>
+            <div class="w-full px-5 py-2 h-14">Concurrent requests</div>
+            <div class="w-full px-5 py-2 h-14">JavaScript rendering</div>
+            <div class="w-full px-5 py-2 h-14">Rotating & Premium Proxies</div>
+            <div class="w-full px-5 py-2 h-14">Geotargeting</div>
+            <div class="w-full px-5 py-2 h-14">
+              Screenshots, Extraction Rules, Google Search API
+            </div>
+            <div class="w-full px-5 py-2 h-14">Priority Email Support</div>
+            <div class="w-full px-5 py-2 h-14">Dedicated Account Manager</div>
+            <div class="w-full px-5 py-2 h-14">Team Management</div>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <div class="flex">
+              <div class="w-1/4 flex flex-col gap-5">
+                <div class="w-full h-[150px] relative border-b border-gray-400">
+                  <h1
+                    class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
+                  ></h1>
+                  <div
+                    class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
+                  >
+                    <h1 class="text-2xl font-semibold">Freelance</h1>
+                    <span class="flex text-2xl">
+                      <strong class="font-semibold">$50</strong>
+                      <small>/mo</small></span
                     >
+                  </div>
                 </div>
-                <a
-                    href=""
-                    class="px-20 py-5 max-lg:px-10 max-lg:py-4 max-lg:text-sm bg-buttton text-black rounded-md font-bold text-xl"
-                    >Try ScrappingBee Free</a
-                >
-            </div>
-            <div class="mx-auto w-full max-w-screen-xl">
-                <div
-                    class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:text-center gap-2 px-4 py-6 lg:py-8 md:grid-cols-4"
-                >
-                    <div
-                        class="flex flex-col gap-2 row-span-6 max-lg:items-center"
-                    >
-                        <img
-                            src="https://www.scrapingbee.com/images/logo-white.svg"
-                            alt=""
-                            width="150"
-                        />
-                        <span class="text-lg my-5"
-                            >ScrapingBee API handles headless browsers and
-                            rotates proxies for you.
-                        </span>
-
-                        <div class="flex gap-4">
-                            <a href="" class="hover:text-secondary">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="" class="hover:text-secondary">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-lg font-semibold text-secondary">
-                            Help center
-                        </h2>
-                        <ul class="text-white text-lg">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Discord Server</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Twitter</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Facebook</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-lg font-semibold text-secondary">
-                            Help center
-                        </h2>
-                        <ul class="text-white text-lg">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Discord Server</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Twitter</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Facebook</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-lg font-semibold text-secondary">
-                            Help center
-                        </h2>
-                        <ul class="text-white text-lg">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Discord Server</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Twitter</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Facebook</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-lg font-semibold text-secondary">
-                            Help center
-                        </h2>
-                        <ul class="text-white text-lg">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Discord Server</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Twitter</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Facebook</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-lg font-semibold text-secondary">
-                            Help center
-                        </h2>
-                        <ul class="text-white text-lg">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Discord Server</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Twitter</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Facebook</a
-                                >
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline text-lg"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  150.000
                 </div>
-            </div>
-            <div
-                class="w-full flex flex-col gap-2 items-center py-16 text-lg font-semibold"
-            >
-                <i
-                    class="fa fa-heart bg-yellow-500 text-black rounded-full aspect-square p-4 text-2xl"
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  5
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
                     aria-hidden="true"
-                ></i>
-                <p>Copyright &copy; 2023</p>
-                <p>Made with tailwindcss</p>
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center h-14 font-semibold btn">
+                  <a
+                    href=""
+                    class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
+                    >Try Now</a
+                  >
+                </div>
+              </div>
+              <div class="w-1/4 flex flex-col gap-5 recomended">
+                <div class="w-full h-[150px] relative border-b border-gray-400">
+                  <h1
+                    class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
+                  >
+                    Recommended
+                  </h1>
+                  <div
+                    class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
+                  >
+                    <h1 class="text-2xl font-semibold">Freelance</h1>
+                    <span class="flex text-2xl">
+                      <strong class="font-semibold">$50</strong>
+                      <small>/mo</small></span
+                    >
+                  </div>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  150.000
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  5
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center h-14 font-semibold btn">
+                  <a
+                    href=""
+                    class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
+                    >Try Now</a
+                  >
+                </div>
+              </div>
+              <div class="w-1/4 flex flex-col gap-5">
+                <div class="w-full h-[150px] relative border-b border-gray-400">
+                  <h1
+                    class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
+                  ></h1>
+                  <div
+                    class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
+                  >
+                    <h1 class="text-2xl font-semibold">Freelance</h1>
+                    <span class="flex text-2xl">
+                      <strong class="font-semibold">$50</strong>
+                      <small>/mo</small></span
+                    >
+                  </div>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  150.000
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  5
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center h-14 font-semibold btn">
+                  <a
+                    href=""
+                    class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
+                    >Try Now</a
+                  >
+                </div>
+              </div>
+              <div class="w-1/4 flex flex-col gap-5">
+                <div class="w-full h-[150px] relative border-b border-gray-400">
+                  <h1
+                    class="text-center px-5 py-2 text-sm font-semibold pricing-title absolute top-0 left-0 w-full"
+                  ></h1>
+                  <div
+                    class="px-5 pt-16 pb-5 items-center justify-end flex-col w-full flex"
+                  >
+                    <h1 class="text-2xl font-semibold">Freelance</h1>
+                    <span class="flex text-2xl">
+                      <strong class="font-semibold">$50</strong>
+                      <small>/mo</small></span
+                    >
+                  </div>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  150.000
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  5
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  <i
+                    class="fa fa-check text-4xl text-green-500"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center px-5 py-2 h-14 font-semibold">
+                  -
+                </div>
+                <div class="w-full text-center h-14 font-semibold btn">
+                  <a
+                    href=""
+                    class="font-semibold text-sm xl:px-12 px-4 py-2.5 border-2 border-black rounded-md hover:bg-primary hover:text-white transition-all"
+                    >Try Now</a
+                  >
+                </div>
+              </div>
             </div>
-        </footer>
-        <script>
-            let hamburgerBtn = document.getElementById("hamburgerBtn");
-            let menu = document.getElementById("mobile-menu");
-            hamburgerBtn.addEventListener("click", function () {
-                menu.classList.toggle("hidden");
-            });
-            hamburgerBtn.addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
-            window.addEventListener("click", function () {
-                if (!hamburgerBtn.contains(event.target)) {
-                    menu.classList.add("hidden");
-                    hamburgerBtn.classList.remove("active");
-                }
-            });
-        </script>
-    </body>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-1/2">
+          <p class="text-xl leading-normal font-bold text-center">
+            Need more credits and concurrency per month?
+          </p>
+          <a
+            href=""
+            class="w-full flex justify-center px-12 py-2.5 bg-primary text-white rounded-md text-xl font-bold mb-12"
+            >Try Now</a
+          >
+        </div>
+      </div>
+      <div class="text-center">
+        <p class="text-xl mb-2">
+          Not sure what plan you need?
+          <a
+            href="https://app.scrapingbee.com/account/register"
+            class="font-bold underline"
+            >Try ScrapingBee with 1000 free API calls.</a
+          >
+        </p>
+        <p class="text-lg text-gray-500">(No credit card required)</p>
+      </div>
+    </section>
+    <section
+      id="FAQ"
+      class="w-full p-20 max-lg:h-auto text-white flex-col bg-white px-[10vw] max-lg:px-0 bg-skew-black relative z-10 overflow-x-clip flex justify-center items-center"
+    >
+      <h1 class="text-5.5xl text-white font-bold">Developers are asking...</h1>
+      <div class="flex flex-wrap max-lg:flex-col">
+        <div class="w-1/2 max-lg:w-full h-full flex flex-col px-12">
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              reprehenderit!</strong
+            >
+            <span class="block text-gray-300"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              obcaecati nesciunt voluptas consequuntur, hic provident dolore
+              sunt voluptatum tempora! Debitis ad accusamus cumque facilis
+              sunt?</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              reprehenderit!</strong
+            >
+            <span class="block text-gray-300"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              obcaecati nesciunt voluptas consequuntur, hic provident dolore
+              sunt voluptatum tempora! Debitis ad accusamus cumque facilis
+              sunt?</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              reprehenderit!</strong
+            >
+            <span class="block text-gray-300"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              obcaecati nesciunt voluptas consequuntur, hic provident dolore
+              sunt voluptatum tempora! Debitis ad accusamus cumque facilis
+              sunt?</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              reprehenderit!</strong
+            >
+            <span class="block text-gray-300"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              obcaecati nesciunt voluptas consequuntur, hic provident dolore
+              sunt voluptatum tempora! Debitis ad accusamus cumque facilis
+              sunt?</span
+            >
+          </div>
+        </div>
+        <div class="w-1/2 max-lg:w-full h-full flex flex-col px-12">
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto!</strong
+            >
+            <span class="block leading-a50 text-gray-300"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              aut voluptatum dolores eligendi veritatis provident.</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto!</strong
+            >
+            <span class="block leading-a50 text-gray-300"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              aut voluptatum dolores eligendi veritatis provident.</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto!</strong
+            >
+            <span class="block leading-a50 text-gray-300"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              aut voluptatum dolores eligendi veritatis provident.</span
+            >
+          </div>
+          <div class="py-5">
+            <strong class="block text-xl"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto!</strong
+            >
+            <span class="block leading-a50 text-gray-300"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              aut voluptatum dolores eligendi veritatis provident.</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full h-auto bg-white px-[10vw] max-lg:px-5 py-40">
+      <h1 class="text-6xl font-bold">Who are we?</h1>
+      <h3 class="text-4xl font-semibold">
+        Developers, Developers, Developers!
+      </h3>
+      <span class="text-xl"
+        >You can read the full-story
+        <a href="" class="underline">here</a>.</span
+      >
+      <div class="w-full flex gap-5 p-10 max-lg:p-0">
+        <div class="flex max-lg:flex-col">
+          <div
+            class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
+          >
+            <div
+              class="avatar w-full max-lg:w-1/3 aspect-square overflow-hidden rounded-md"
+            >
+              <img
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                class="w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div class="information flex flex-col py-10 text-center">
+              <h1 class="font-bold text-4xl leading-normal">Ahmad Fauzan</h1>
+              <span class="text-2xl text-gray-500">CO-Funder</span>
+              <hr class="w-1/4 self-center border-[3px] my-7 border-black" />
+              <p class="text-lg text-gray-500">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                iusto corrupti minima, veniam aspernatur atque blanditiis
+                voluptates, officia nesciunt, quidem eveniet labore quos
+                molestiae facilis sed quo reprehenderit perspiciatis sint.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
+          >
+            <div
+              class="avatar w-full max-lg:w-1/3 maxlg aspect-square overflow-hidden rounded-md"
+            >
+              <img
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                class="w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div class="information flex flex-col py-10 text-center">
+              <h1 class="font-bold text-4xl leading-normal">Ahmad Fauzan</h1>
+              <span class="text-2xl text-gray-500">CO-Funder</span>
+              <hr class="w-1/4 self-center border-[3px] my-7 border-black" />
+              <p class="text-lg text-gray-500">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                iusto corrupti minima, veniam aspernatur atque blanditiis
+                voluptates, officia nesciunt, quidem eveniet labore quos
+                molestiae facilis sed quo reprehenderit perspiciatis sint.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-1/3 max-lg:w-full flex justify-center flex-col items-center p-10 max-lg:px-0"
+          >
+            <div
+              class="avatar w-full max-lg:w-1/3 maxlg aspect-square overflow-hidden rounded-md"
+            >
+              <img
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                class="w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div class="information flex flex-col py-10 text-center">
+              <h1 class="font-bold text-4xl leading-normal">Ahmad Fauzan</h1>
+              <span class="text-2xl text-gray-500">CO-Funder</span>
+              <hr class="w-1/4 self-center border-[3px] my-7 border-black" />
+              <p class="text-lg text-gray-500">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                iusto corrupti minima, veniam aspernatur atque blanditiis
+                voluptates, officia nesciunt, quidem eveniet labore quos
+                molestiae facilis sed quo reprehenderit perspiciatis sint.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-52 flex justify-center items-center flex-col">
+        <h1 class="font-bold text-6xl">Contact us</h1>
+        <span class="text-2xl">Got any questions? Don't hesitate to reach</span>
+        <a
+          href=""
+          class="my-5 px-12 py-4 bg-primary text-white rounded-md font-bold text-lg"
+          >Get in touch</a
+        >
+      </div>
+    </section>
+    <footer class="w-full px-[10vw] flex flex-wrap bg-primary text-white">
+      <div
+        class="w-full pb-24 pt-40 flex items-center max-lg:flex-col max-lg:text-center max-lg:gap-5 justify-between border-b-[0.4px] border-gray-700"
+      >
+        <div>
+          <h1 class="text-6xl max-lg:text-4xl font-bold">
+            Ready to get started?
+          </h1>
+          <span class="text-lg max-lg:text-sm"
+            >Get access to 1,000 free API credits, no credit card
+            required!</span
+          >
+        </div>
+        <a
+          href=""
+          class="px-20 py-5 max-lg:px-10 max-lg:py-4 max-lg:text-sm bg-buttton text-black rounded-md font-bold text-xl"
+          >Try ScrappingBee Free</a
+        >
+      </div>
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div
+          class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:text-center gap-2 px-4 py-6 lg:py-8 md:grid-cols-4"
+        >
+          <div class="flex flex-col gap-2 row-span-6 max-lg:items-center">
+            <img
+              src="https://www.scrapingbee.com/images/logo-white.svg"
+              alt=""
+              width="150"
+            />
+            <span class="text-lg my-5"
+              >ScrapingBee API handles headless browsers and rotates proxies for
+              you.
+            </span>
+
+            <div class="flex gap-4">
+              <a href="" class="hover:text-secondary">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="" class="hover:text-secondary">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-secondary">
+              Help center
+            </h2>
+            <ul class="text-white text-lg">
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-secondary">
+              Help center
+            </h2>
+            <ul class="text-white text-lg">
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-secondary">
+              Help center
+            </h2>
+            <ul class="text-white text-lg">
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-secondary">
+              Help center
+            </h2>
+            <ul class="text-white text-lg">
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-lg font-semibold text-secondary">
+              Help center
+            </h2>
+            <ul class="text-white text-lg">
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline text-lg">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full flex flex-col gap-2 items-center py-16 text-lg font-semibold"
+      >
+        <i
+          class="fa fa-heart bg-yellow-500 text-black rounded-full aspect-square p-4 text-2xl"
+          aria-hidden="true"
+        ></i>
+        <p>Copyright &copy; 2023</p>
+        <p>Made with tailwindcss</p>
+      </div>
+    </footer>
+    <script>
+      let hamburgerBtn = document.getElementById("hamburgerBtn");
+      let menu = document.getElementById("mobile-menu");
+      hamburgerBtn.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+      });
+      hamburgerBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+      window.addEventListener("click", function () {
+        if (!hamburgerBtn.contains(event.target)) {
+          menu.classList.add("hidden");
+          hamburgerBtn.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
 </html>
