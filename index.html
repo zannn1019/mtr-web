@@ -3,15 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Median Talenta Raya</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./asset/logo_small.png"
     />
     <style>
       html {
@@ -60,7 +70,6 @@
           right: -50%;
           top: -50%;
           transform: rotate(-8deg) skew(-8deg);
-          background: #202442;
           z-index: -1;
         }
         .bg-skew-white-b:after {
@@ -132,15 +141,19 @@
     class="w-full h-auto flex-col flex justify-center items-center max-lg:bg-primary"
   >
     <section
-      class="overflow-x-clip h-screen flex flex-col relative px-[10vw] max-xl:px-5 transition-a ll duration-150 z-10 bg-skew-yellow-b mb-16 text-white"
+      class="overflow-x-clip h-screen flex flex-col relative px-[10vw] max-xl:px-5 transition-all duration-150 z-10 bg-skew-yellow-b mb-16 text-white"
+      style="
+        background-image: url(./asset/bg_first.jpg);
+        background-size: cover;
+      "
     >
       <nav
         class="w-full flex items-center max-lg:justify-between gap-10 px-0 p-2 pt-10 max-lg:pt-5 relative"
       >
         <a href="">
           <img
-            src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png"
-            alt="Logo Here"
+            src="./asset/logo_horizontal_white.png"
+            alt="Median Talenta Raya"
             width="200px"
           />
         </a>
@@ -149,22 +162,24 @@
           class="absolute top-full left-0 w-full bg-white h-auto hidden flex-col text-black"
         >
           <div class="link flex gap-2 flex-col p-5">
-            <a href="#pricing" class="hover:underline">Pricing</a>
-            <a href="#FAQ" class="hover:underline">FAQ</a>
-            <a href="#" class="hover:underline">Blog</a>
-            <a href="#" class="hover:underline">Other Fetures</a>
-            <a href="#" class="hover:underline">Developers</a>
+            <a href="#Home" class="hover:underline">Home</a>
+            <a href="#training-sertification" class="hover:underline"
+              >Training & Sertification
+            </a>
+            <a href="#" class="hover:underline">Program</a>
+            <a href="#" class="hover:underline">About</a>
           </div>
         </div>
         <div
-          class="w-full flex items-center max-lg:justify-end justify-between px-5 max-lg:hidden"
+          class="w-full flex items-center max-lg:justify-end justify-end px-5 max-lg:hidden"
         >
           <div class="link flex gap-12 max-lg:hidden">
-            <a href="#pricing" class="hover:underline">Pricing</a>
-            <a href="#FAQ" class="hover:underline">FAQ</a>
-            <a href="#" class="hover:underline">Blog</a>
+            <a href="#Home" class="hover:underline">Home</a>
+            <a href="#training-sertification" class="hover:underline"
+              >Training & Sertification
+            </a>
+            <a href="#" class="hover:underline">Program</a>
             <a href="#" class="hover:underline">Other Fetures</a>
-            <a href="#" class="hover:underline">Developers</a>
           </div>
         </div>
         <svg
@@ -190,32 +205,12 @@
       >
         <div class="title flex flex-col gap-5 justify-start items-start">
           <h1 class="text-6xl max-lg:text-5xl font-bold leading-tight">
-            Tired of getting blocked while scraping the web?
+            Unlock Your Potential with MedianSkill
           </h1>
           <p class="text-xl max-lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod
-            corrupti, quidem ullam est repudiandae.
+            Elevate Your Expertise and Achieve National and International
+            Success Today
           </p>
-          <a
-            href=""
-            class="bg-buttton text-black font-bold px-8 py-4 rounded-md hover:bg-slate-800 transition-all duration-150"
-            >Try ScrappingBee for Free</a
-          >
-          <div class="rating flex items-center w-full gap-3">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4hcnJIQYWz-Tc862Zctrtp4DBFIBO_qiubPtd7qFGhyGCtbo7o6Pqm9NeyNqfLiTDTg&usqp=CAU"
-              alt="Rating here maybe?"
-              class="w-32 h-12 object-cover rounded-xl"
-            />
-            <span>based on 65+ reviews.</span>
-          </div>
-        </div>
-        <div class="sticker w-full max-lg:hidden">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4383/4383819.png"
-            alt="Sticker Here"
-            class="w-10/12"
-          />
         </div>
       </main>
     </section>
