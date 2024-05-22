@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Median Talenta Raya</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loading.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +25,11 @@
       href="./asset/logo_small.png"
     />
     <style>
+      #home {
+        background-image: url(./asset/bg_first.jpg);
+        background-size: cover;
+        background-position: 60% 30%;
+      }
       html {
         scroll-behavior: smooth;
       }
@@ -62,6 +68,10 @@
         background: #ffc91f;
       }
       @media (min-width: 1024px) {
+        #home {
+          background-image: url(./asset/bg_first.jpg);
+          background-size: cover;
+        }
         .bg-skew-yellow-b::after {
           content: "";
           position: absolute;
@@ -140,17 +150,21 @@
   <body
     class="w-full h-auto flex-col flex justify-center items-center max-lg:bg-primary"
   >
+    <div
+      class="fixed w-full h-screen flex bg-white justify-center items-center left-0 top-0"
+      style="z-index: 9999"
+      id="loading"
+    >
+      <div class="loader"></div>
+    </div>
     <section
       class="overflow-x-clip h-screen flex flex-col relative px-[10vw] max-xl:px-5 transition-all duration-150 z-10 bg-skew-yellow-b mb-16 text-white"
-      style="
-        background-image: url(./asset/bg_first.jpg);
-        background-size: cover;
-      "
+      id="home"
     >
       <nav
         class="w-full flex items-center max-lg:justify-between gap-10 px-0 p-2 pt-10 max-lg:pt-5 relative"
       >
-        <a href="">
+        <a href="/">
           <img
             src="./asset/logo_horizontal_white.png"
             alt="Median Talenta Raya"
@@ -201,7 +215,7 @@
         </svg>
       </nav>
       <main
-        class="w-full h-full grid grid-cols-2 max-lg:grid-cols-1 gap-10 items-center"
+        class="w-full h-full grid grid-cols-2 max-lg:grid-cols-1 gap-10 items-center max-lg:px-5"
       >
         <div class="title flex flex-col gap-5 justify-start items-start">
           <h1 class="text-6xl max-lg:text-5xl font-bold leading-tight">
@@ -1356,6 +1370,14 @@
           menu.classList.add("hidden");
           hamburgerBtn.classList.remove("active");
         }
+      });
+
+      window.addEventListener("load", function () {
+        document.body.style.overflow = "hidden";
+        setTimeout(() => {
+          document.getElementById("loading").classList.add("fade-out");
+          document.body.style.overflow = "auto";
+        }, 2000);
       });
     </script>
   </body>
